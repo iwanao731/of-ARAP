@@ -211,10 +211,10 @@ void ofApp::draw() {
 
 	ofSetColor(0);
 	if (m_enable_cameraInput) {
-		ofDrawBitmapString("mouse enable", glm::vec2(20, 20));
+		ofDrawBitmapString("SPACE: camera enable, drag disable", glm::vec2(20, 20));
 	}
 	else {
-		ofDrawBitmapString("mouse disable", glm::vec2(20, 20));
+		ofDrawBitmapString("SPACE: camera disable, drag enable", glm::vec2(20, 20));
 	}
 }
 
