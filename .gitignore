@@ -7,8 +7,13 @@
 *.vcxproj
 *.filters
 *.user
-
 .vs/
+*.exe
+*.exp
+*.lib
+*.dll
+
+*.gitkeep
 
 # build files
 openFrameworks.a
