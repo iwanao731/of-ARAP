@@ -82,13 +82,15 @@ void ofApp::setup() {
 
 	using namespace Eigen;
 	using namespace std;
-	igl::readOBJ("data/armadillo.obj", V, F);
+    
+    string filepath = ofToDataPath("");
 
+    igl::readOBJ(filepath + "armadillo.obj", V, F);
 	convertMesh_IGL2OF(V, F, mMesh);
 
 	U = V;
 	MatrixXd W;
-	igl::readDMAT("data/armadillo-weights.dmat", W);
+	igl::readDMAT(filepath + "armadillo-weights.dmat", W);
 	igl::lbs_matrix_column(V, W, M);
 
 	// Cluster according to weights
